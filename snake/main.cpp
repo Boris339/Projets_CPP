@@ -2,10 +2,10 @@
 #include <thread>
 #include <chrono>
 
-#include "snake.h"
-#include "screen.h"
-#include "board.h"
-#include "keyboard.h"
+#include "includes/snake.h"
+#include "includes/screen.h"
+#include "includes/board.h"
+#include "includes/keyboard.h"
 
 
 #define UP_ARROW    65
@@ -79,13 +79,13 @@ int main(int, char**) {
         {
             y++;
         }
+
+
+        
         // Contrôle  des limites
         if (x < 0) x=0;
         if (y < 0) y=0;
 
-
-        // Exemple d'attente si besoin était (attention, suspend entièrement l'application)
-        //std::this_thread::sleep_for (std::chrono::milliseconds(100));
     }
 
     keyboard_end();
